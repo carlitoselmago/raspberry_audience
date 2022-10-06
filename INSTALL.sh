@@ -9,19 +9,19 @@ echo "console=serial0,115200 console=tty1 root=PARTUUID=e0e69b19-02 rootfstype=e
 
 git clone https://github.com/Jyurineko/libfreenect2
 cd libfreenect2
-sudo apt install libudev-dev
-sudo apt install mesa-utils
-sudo apt update
-sudo apt install libgles2-mesa-dev
+sudo apt install libudev-dev  -y
+sudo apt install mesa-utils  -y
+sudo apt update  -y
+sudo apt install libgles2-mesa-dev  -y
 #Now similar to Linux install description from: https://github.com/OpenKinect/libfreenect2 ...
-sudo apt-get install libusb-1.0-0-dev
-sudo apt-get install libturbojpeg0-dev
-sudo apt-get install libglfw3-dev
-sudo apt-get install libopenni2-dev
-sudo apt install -y cmake
+sudo apt-get install libusb-1.0-0-dev  -y
+sudo apt-get install libturbojpeg0-dev  -y
+sudo apt-get install libglfw3-dev  -y
+sudo apt-get install libopenni2-dev  -y
+sudo apt install -y cmake  -y
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_CUDA=OFF -DENABLE_OPENCL=OFF -DENABLE_OPENGL_AS_ES31=ON -DENABLE_CXX11=ON -DENABLE_VAAPI=OFF
 make -j4
-sudo make install
+sudo make install  -y
 sudo ldconfig
 sudo cp ../platform/linux/udev/90-kinect2.rules /etc/udev/rules.d/
