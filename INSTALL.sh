@@ -3,9 +3,9 @@
 #modify GPU memory
 echo "gpu_mem=64" >> /boot/config.txt
 
-#replace cmdline with
-rm /boot/cmdline.txt
-echo "console=serial0,115200 console=tty1 root=PARTUUID=e0e69b19-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles usbcore.usbfs_memory_mb=64 usbcore.autosuspend=-1" > /boot/cmdline.txt
+#replace cmdline with (this causes boot problems, disabled)
+#rm /boot/cmdline.txt
+#echo "console=serial0,115200 console=tty1 root=PARTUUID=e0e69b19-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles usbcore.usbfs_memory_mb=64 usbcore.autosuspend=-1" > /boot/cmdline.txt
 
 git clone https://github.com/Jyurineko/libfreenect2
 cd libfreenect2
