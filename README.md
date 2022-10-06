@@ -1,7 +1,7 @@
 # raspberry_audience
 Detects if there's people entering a room and sends a play signal
 
-Requirements:
+## Requirements:
 - Rasberry 4b +
 - Kinect 2 (connected thru usb3 port)
 
