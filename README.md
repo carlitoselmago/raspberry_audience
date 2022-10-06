@@ -6,4 +6,4 @@ run
 sudo sh INSTALL.sh
 
 test that works with
-libfreenect2/build/bin/Protonect gl
+sh test.sh
