@@ -1,3 +1,5 @@
+#!/bin/sh -e
+
 #modify GPU memory
 echo "gpu_mem=64" >> /boot/config.txt
 
